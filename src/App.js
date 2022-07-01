@@ -2715,18 +2715,21 @@ function App() {
 
 
   const handleChoose = (e)=>{
-    setTurn(turn === 1 ? 2 : 1)
 
     if(e.target.innerText === '' && result === null){
-      if(turn ===1){
+      if(turn === 1 && e.target.innerText !== 'X'){
         e.target.innerText= 'X'
         const nIndex = +e.target.getAttribute('index')
         setChosenA(pre =>[...pre,nIndex].sort((a,b)=>a-b))
-        }else{
+        setTurn(2)
+        }if(turn === 2 && e.target.innerText !== 'O'){
         e.target.innerText= 'O'
         const nIndex = +e.target.getAttribute('index')
         setChosenB(pre =>[...pre,nIndex].sort((a,b)=>a-b))
+        setTurn(1)
       }
+    }
+    else{
     }
     }
 
