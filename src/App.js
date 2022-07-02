@@ -2737,53 +2737,127 @@ function App() {
       for( let i = 0; i< chosenA.length; i++){
 
         // landscape
-        if(chosenB.indexOf(chosenA[i]-1 === -1)
-          && +chosenA[i]+1 === chosenA[i+1] 
+        if(+chosenA[i]+1 === chosenA[i+1] 
           && +chosenA[i+1]+1 === +chosenA[i+2]
           && +chosenA[i+2]+1 === +chosenA[i+3]
-          && +chosenA[i+3]+1 === +chosenA[i+4]
-          && chosenB.indexOf(chosenA[i+4]+1) === -1
-          )
-          {
-           setResult(state.user1)
-           setTimePlay(1200 - timeLeft)
-           
+          && +chosenA[i+3]+1 === +chosenA[i+4]){
+
+            if(chosenB.indexOf(chosenA[i]-1)!== -1){
+              if( chosenB.indexOf(chosenA[i+4]+ 1) !== -1){
+                console.log('chua thang 1')
+              }else{
+                setResult(state.user1)
+                setTimePlay(1200 - timeLeft)
+              }
+            }
+
+            if(chosenB.indexOf(chosenA[i+4]+ 1) !== -1){
+              if(chosenB.indexOf(chosenA[i]-1) !== -1){
+                console.log('chua thang')
+              }else{
+                setResult(state.user1)
+                setTimePlay(1200 - timeLeft)
+              }
+            }
+            if(chosenB.indexOf(chosenA[i]-1 === -1) && chosenB.indexOf(chosenA[i+4]+ 1) === -1){
+              setResult(state.user1)
+              setTimePlay(1200 - timeLeft)
+            }
+
+            
           }
 
           // vertical
-        if(chosenB.indexOf(chosenA[i]-30  === -1)
-          &&+chosenA[i+1] - +chosenA[i] === 30
+        if(+chosenA[i+1] - +chosenA[i] === 30
           && +chosenA[i+2] - +chosenA[i+1] === 30
           && +chosenA[i+3] - +chosenA[i+2] === 30
-          && +chosenA[i+4] - +chosenA[i+3] === 30
-          && chosenB.indexOf(chosenA[i+4]+30) === -1)
+          && +chosenA[i+4] - +chosenA[i+3] === 30)
           {
-            setResult(state.user1)
-           setTimePlay(1200 - timeLeft)
+
+            if(chosenB.indexOf(chosenA[i]-30)!== -1){
+              if( chosenB.indexOf(chosenA[i+4]+ 30) !== -1){
+                console.log('chua thang 1')
+              }else{
+                setResult(state.user1)
+                setTimePlay(1200 - timeLeft)
+              }
+            }
+
+            if(chosenB.indexOf(chosenA[i+4]+ 30) !== -1){
+              if(chosenB.indexOf(chosenA[i]-30) !== -1){
+                console.log('chua thang')
+              }else{
+                setResult(state.user1)
+                setTimePlay(1200 - timeLeft)
+              }
+              break;
+            }
+            if(chosenB.indexOf(chosenA[i]-30 === -1) && chosenB.indexOf(chosenA[i+4]+ 30) === -1){
+              setResult(state.user1)
+              setTimePlay(1200 - timeLeft)
+              break;
+            }
       }
   
         // slash to left up
-        if(chosenB.indexOf(chosenA[i]-31  === -1)
-          &&+chosenA[i+1] - +chosenA[i] === 31
+        if(+chosenA[i+1] - +chosenA[i] === 31
           && +chosenA[i+2] - +chosenA[i+1] === 31
           && +chosenA[i+3] - +chosenA[i+2] === 31
-          && +chosenA[i+4] - +chosenA[i+3] === 31
-          && chosenB.indexOf(chosenA[i+4]+31) === -1){
+          && +chosenA[i+4] - +chosenA[i+3] === 31){
+
+            if(chosenB.indexOf(chosenA[i]-31)!== -1){
+              if( chosenB.indexOf(chosenA[i+4]+ 31) !== -1){
+                console.log('chua thang 1')
+              }else{
+                setResult(state.user1)
+                setTimePlay(1200 - timeLeft)
+              }
+            }
+
+            if(chosenB.indexOf(chosenA[i+4]+ 31) !== -1){
+              if(chosenB.indexOf(chosenA[i]-31) !== -1){
+                console.log('chua thang')
+              }else{
+                setResult(state.user1)
+                setTimePlay(1200 - timeLeft)
+              }
+              break;
+            }
+            if(chosenB.indexOf(chosenA[i]-31 === -1) && chosenB.indexOf(chosenA[i+4]+ 31) === -1){
               setResult(state.user1)
               setTimePlay(1200 - timeLeft)
+              break;
+            }
 
         }
 
 
         // slash to right up
-        if(chosenB.indexOf(chosenA[i]-29  === -1)
-          &&+chosenA[i+1] - +chosenA[i] === 29
+        if(+chosenA[i+1] - +chosenA[i] === 29
           && +chosenA[i+2] - +chosenA[i+1] === 29
           && +chosenA[i+3] - +chosenA[i+2] === 29
-          && +chosenA[i+4] - +chosenA[i+3] === 29
-          && chosenB.indexOf(chosenA[i+4]+29) === -1){
+          && +chosenA[i+4] - +chosenA[i+3] === 29){
+            if(chosenB.indexOf(chosenA[i]-29)!== -1){
+              if( chosenB.indexOf(chosenA[i+4]+ 29) !== -1){
+                console.log('chua thang 1')
+              }else{
+                setResult(state.user1)
+                setTimePlay(1200 - timeLeft)
+              }
+            }
+
+            if(chosenB.indexOf(chosenA[i+4]+ 29) !== -1){
+              if(chosenB.indexOf(chosenA[i]-29) !== -1){
+                console.log('chua thang')
+              }else{
+                setResult(state.user1)
+                setTimePlay(1200 - timeLeft)
+              }
+            }
+            if(chosenB.indexOf(chosenA[i]-29 === -1) && chosenB.indexOf(chosenA[i+4]+ 29) === -1){
               setResult(state.user1)
               setTimePlay(1200 - timeLeft)
+            }
 
         }
       }
@@ -2793,42 +2867,107 @@ function App() {
       for( let i = 0; i< chosenB.length; i++){
 
         // Landscape
-          if(chosenA.indexOf(chosenB[i]-1  === -1)
-            &&+chosenB[i]+1 === chosenB[i+1] 
+          if(+chosenB[i]+1 === chosenB[i+1] 
             && +chosenB[i+1]+1 === +chosenB[i+2]
             && +chosenB[i+2]+1 === +chosenB[i+3]
-            && +chosenB[i+3]+1 === +chosenB[i+4]
-            && chosenA.indexOf(chosenB[i+4]+1) === -1)
+            && +chosenB[i+3]+1 === +chosenB[i+4])
             {
+
+              if(chosenA.indexOf(chosenB[i]-1)!== -1){
+                if( chosenA.indexOf(chosenB[i+4]+ 1) !== -1){
+                  console.log('chua thang 1')
+                }else{
                   setResult(state.user2)
                    setTimePlay(1200 - timeLeft)
+                }
+                break;
+              }
+  
+              if(chosenA.indexOf(chosenB[i+4]+ 1) !== -1){
+                if(chosenA.indexOf(chosenB[i]-1) !== -1){
+                  console.log('chua thang')
+                }else{
+                  setResult(state.user2)
+                   setTimePlay(1200 - timeLeft)
+                }
+                break;
+              }
+              if(chosenA.indexOf(chosenB[i]-1 === -1) && chosenA.indexOf(chosenB[i+4]+ 1) === -1){
+                setResult(state.user2)
+                setTimePlay(1200 - timeLeft)
+                break;
+              }
+  
+
 
             }
 
             // Vertical
-          if(chosenA.indexOf(chosenB[i]-30  === -1)
-            &&+chosenB[i+1] - +chosenB[i] === 30
+          if(+chosenB[i+1] - +chosenB[i] === 30
             && +chosenB[i+2] - +chosenB[i+1] === 30
             && +chosenB[i+3] - +chosenB[i+2] === 30
-            && +chosenB[i+4] - +chosenB[i+3] === 30
-            && chosenA.indexOf(chosenB[i+4]+30) === -1)
+            && +chosenB[i+4] - +chosenB[i+3] === 30)
             {
+
+              if(chosenA.indexOf(chosenB[i]-30)!== -1){
+                if( chosenA.indexOf(chosenB[i+4]+ 30) !== -1){
+                  console.log('chua thang 1')
+                }else{
+                  setResult(state.user2)
+                  setTimePlay(1200 - timeLeft)
+                }
+              }
+  
+              if(chosenA.indexOf(chosenB[i+4]+ 30) !== -1){
+                if(chosenA.indexOf(chosenB[i]-30) !== -1){
+                  console.log('chua thang')
+                }else{
+                  setResult(state.user2)
+                  setTimePlay(1200 - timeLeft)
+                }
+              }
+              if(chosenA.indexOf(chosenB[i]-30 === -1) && chosenA.indexOf(chosenB[i+4]+ 30) === -1){
                 setResult(state.user2)
                  setTimePlay(1200 - timeLeft)
+              }
+
 
           }
 
           // Slash to left up
     
-          if(chosenA.indexOf(chosenB[i]-31  === -1)
-            &&+chosenB[i+1] - +chosenB[i] === 31
+          if(+chosenB[i+1] - +chosenB[i] === 31
             && +chosenB[i+2] - +chosenB[i+1] === 31
             && +chosenB[i+3] - +chosenB[i+2] === 31
-            && +chosenB[i+4] - +chosenB[i+3] === 31
-            && chosenA.indexOf(chosenB[i+4]+31) === -1)
+            && +chosenB[i+4] - +chosenB[i+3] === 31)
             {
+
+              if(chosenA.indexOf(chosenB[i]-31)!== -1){
+                if( chosenA.indexOf(chosenB[i+4]+ 31) !== -1){
+                  console.log('chua thang 1')
+                }else{
+                  setResult(state.user2)
+                  setTimePlay(1200 - timeLeft)
+                }
+                break;
+              }
+  
+              if(chosenA.indexOf(chosenB[i+4]+ 31) !== -1){
+                if(chosenA.indexOf(chosenB[i]-31) !== -1){
+                  console.log('chua thang')
+                }else{
+                  setResult(state.user2)
+                  setTimePlay(1200 - timeLeft)
+                }
+                break;
+              }
+              if(chosenA.indexOf(chosenB[i]-31 === -1) && chosenA.indexOf(chosenB[i+4]+ 31) === -1){
                 setResult(state.user2)
                  setTimePlay(1200 - timeLeft)
+                break;
+              }
+
+
 
           }
           
@@ -2839,13 +2978,34 @@ function App() {
             && +chosenB[i+3] - +chosenB[i+2] === 29
             && +chosenB[i+4] - +chosenB[i+3] === 29
             && chosenA.indexOf(chosenB[i+4]+29) === -1){
+
+              if(chosenA.indexOf(chosenB[i]-29)!== -1){
+                if( chosenA.indexOf(chosenB[i+4]+ 29) !== -1){
+                  console.log('chua thang 1')
+                }else{
+                  setResult(state.user2)
+                  setTimePlay(1200 - timeLeft)
+                }
+              }
+  
+              if(chosenA.indexOf(chosenB[i+4]+ 29) !== -1){
+                if(chosenA.indexOf(chosenB[i]-29) !== -1){
+                  console.log('chua thang')
+                }else{
+                  setResult(state.user2)
+                  setTimePlay(1200 - timeLeft)
+                }
+              }
+              if(chosenA.indexOf(chosenB[i]-29 === -1) && chosenA.indexOf(chosenB[i+4]+ 29) === -1){
                 setResult(state.user2)
                  setTimePlay(1200 - timeLeft)
+              }
+
+
 
           }
       }
     },[chosenA,chosenB])
-
 
 
   return (
